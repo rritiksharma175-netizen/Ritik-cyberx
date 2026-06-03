@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+   <title>Ritik Cyberx | Ethical Hacking Tutorials & Guides</title>
+    <meta name="description" content="Welcome to Ritik Cyberx! Your ultimate destination for the latest tech news, cybersecurity tips, coding tutorials, and digital solutions. Stay updated and secure in the digital world.">
+    <meta name="keywords" content="Ritik, cyberxRitik, cyber, securityCyberX, RitikCyberX by Ritik, Ritik cyberxRitik, cyber securityCyberX, RitikCyberX by Ritik Ethical hacking, tutorialsCyber, security, expertPenetration, testing, servicesNetwork, security, solutionsVulnerability, assessmentCyber, threat, analysis, Tech, blog, RitikProgramming, tutorialsWeb, development servicesSoftware bug bounty tipsIT security consultancy Website penetration testingIT solutions providerTech support and consultationData breach prevention Website Headings & URL SlugsBlog Content & About Page">
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIB0j3v1jj2pWJQiI7dXIpneEs_SxPlzk0qdMA8VBbGGRCHShFHV6MRgkkUyJxjo2sKd6mvwfsYEtuSw2Uy9lBRQh_oSPD8LN-DSRMTbrTXfyiYXLKJKwkdm1UcOdff2RWGnorpSEUGrh5TCYnEjaZ2JIpyJfgAMgadatayxMQ5ReisAa0GZJjPN2trcE/s1449/1775063280687.png">
+    <meta name="author" content="Ritik cyberx">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Ritik cyberx">
+    <meta property="og:description" content="Welcome to Ritik Cyberx! Your ultimate destination for the latest tech news, cybersecurity tips, coding tutorials, and digital solutions. Stay updated and secure in the digital world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ritik_cyberx.com">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIB0j3v1jj2pWJQiI7dXIpneEs_SxPlzk0qdMA8VBbGGRCHShFHV6MRgkkUyJxjo2sKd6mvwfsYEtuSw2Uy9lBRQh_oSPD8LN-DSRMTbrTXfyiYXLKJKwkdm1UcOdff2RWGnorpSEUGrh5TCYnEjaZ2JIpyJfgAMgadatayxMQ5ReisAa0GZJjPN2trcE/s320/1775063280687.png">
+    <link rel="canonical" href="https://ritik_cyberx.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap');
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{background:#000;color:#fff;font-family:'Roboto',sans-serif;overflow:hidden;height:100vh;width:100vw}
+    .hero{position:relative;width:100%;height:33vh;overflow:hidden}
+
+    /* Layer 1 – red radial background */
+    .layer-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+    /* Layer 3 – solid red gradient text (behind person) */
+    .layer-solid-text{
+      position:absolute;bottom: 3%;left:0;width:100%;z-index:3;pointer-events:none;
+    animation-name: slidleft;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes slidleft {
+  0% {
+    left: -500px; /* Unit 'px' add kiya gaya hai */
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+    /* Layer 4 – person cutout */
+    .layer-person{
+      position:absolute;
+      bottom:0;
+      left:40%;
+      transform:translateX(-42%);
+      height:88%;z-index:4;
+      pointer-events:none;
+      animation-name: pullup;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes pullup {
+  0% {
+    bottom: -500px; /* Unit 'px' add kiya gaya hai */
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+    /* Layer 5 – outline text (over person) */
+    .layer-outline-text{
+      position:absolute;bottom: 3%;left:0;width:100%;z-index:5;pointer-events:none;
+    animation-name: slidleft1;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes slidleft1 {
+  0% {
+    left: 500px; /* Unit 'px' add kiya gaya hai */
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+    /* Layer 6 – social icons */
+    .layer-socials{
+      position:absolute;bottom:0;left:0;width:100%;z-index:7;pointer-events:none;
+    }
+
+    /* NAV */
+    nav{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      z-index:10;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:28px 52px 0
+    }
+    .logo{
+      font-family:'Science Gothic',sans-serif;
+      font-size:1.8rem;
+      font-weight:700;
+      color:#e00;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .nav-links{display:flex;gap:42px;list-style:none}
+    .nav-links a{
+      font-family:'Science Gothic',sans-serif;
+      color:#fff;text-decoration:none;font-size:1.8rem;
+      font-weight:400;letter-spacing:.5px;transition:color .5s
+    }
+    .nav-links a:hover{color:#e00; text-decoration: underline;}
+  
+     /* Layer 2 – bottom black fade overlay */
+    .layer-bottom-fade{
+mix-blend-mode: multiply;
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:40%;
+object-fit:cover;
+object-position:bottom;
+z-index:6;
+pointer-events:none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">RITIK CYBERX</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  
+<section class="hero" id="#hero">
+
+  <img class="layer-bg"          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh76dTofZPLg3M-Dr60lSPnfHINBwE7nzhGH5T4zP-h0oO6N9o7ut8PeYsURAGwWcM4Of-d0y0Jlg0tJ693yjqGdYhejXewP6BxHMAy9i1QyVBthbSLSoJUREA3C2MJ4zYBhDpVJwoC7_6UUxqMxYAV6KbZV1Zo3rIiJnXV7iFSvQ4HzTU-1HR_veiG3ic/s1920/hero.png"           alt=""/>
+    
+  <img class="layer-solid-text"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-ZURkz6NDQHz07xD6Ps2Ba6ytW_lTh9TED_0lnDoXjgTCVjT7dRH2bpNMGxU5ELNkgnLYVeIQvU0H87haddZ-8iS_yLzmkGSK0n_9DOAyOVXEzd8mSHBDs4rxmIRxe0CukFNZBzqxBd6jU9JpGktZnQJkOU3uwloJlWqlWfo9p6JcOhPw2b2gcrC3HNg/s320/k_text.png"   alt="RITIK CYBERX"/>
+  
+  <img class="layer-person"      src="https://deeplor.s3.us-west-2.amazonaws.com/matting_original/2026/06/01/ff7b3357d1a441618a60dfe276b25096.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260601T151000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Credential=AKIAROYXHKZU6F6BHMXV%2F20260601%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=0d0df6bb0e2baab90734eed11c4ac4d2cfd1e503d109ee5f5268ff5ac295a6f5"       alt="Ritik CyberX"/>
+  
+  <img class="layer-outline-text" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDGm_esdbQJ07OtmV-_lYRbF9sDBaPApzl0RYglOkC5PDklimO8qhcg3DGAZqcgbEwZFZNaXvUP1OpVVzSP8l61Oa5xAexuvG1N8leGY0M378MJm5yuoaHhyvrKuXo7mwaJLDDbvxd46Wcg6EK3FQ3mixsqjZNTHJXqjvePjnCEdiIij7yMgg_qoG6K3c/s1920/stroke.png" alt=""/>
+  
+  <img class="layer-bottom-fade" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVIzvnhxTdZmRq_Utm07U_E8ncbJyOVhTmHlHGpqoHWX1RYgcVIeaVnbhZCs7ApXmGdG1NUXrWX_ECzLStvQA2vQ6Q7Ijziyz4AfCuV80iwsg_cEgpBGxL5-WLbeO-jk5AEkJ8cKcTGbfnJMFA0w8o8B14oBFXQeLDqydmosQO1kEzt9jm7XNMewZAvis/s320/bottomfade.png"  alt=""/>
+   
+  <div class="layer-socials">
+  
+  <i class="fa fa-instagram" style="
+    font-size:50px;
+    color:red;
+    position:absolute;
+    left: 20px;
+    bottom: 7px;
+    ">
+  <span style="font-size:30px; position:absolute; left: 50px; bottom: 10px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
+  
+  </i>
+  
+ <i class="fa fa-youtube-play" style="
+font-size:50px;
+color:red;
+position:absolute;
+right: 250px; bottom: 8px;"> 
+   
+<span style="font-size:30px; position:absolute; right: -235px; bottom: 9px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
+   
+ </i>
+    
+    
+  </div>
+  </div>
+</section>
+</body>
+</html>
