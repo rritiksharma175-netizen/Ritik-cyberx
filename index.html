@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+  <meta name="viewport" content="width=device-width, initial-scale="0.1"/>
    <title>Ritik Cyberx | Ethical Hacking Tutorials & Guides</title>
   <meta name="google-site-verification" content="2T2oJem5ydjNIaoDWnpUzJIoFZzXou3JexqGCtcrRAo" />
   <meta name="description" content="Welcome to Ritik Cyberx! Your ultimate destination for the latest tech news, cybersecurity tips, coding tutorials, and digital solutions. Stay updated and secure in the digital world.">
@@ -23,7 +23,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap');
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    body{background:#000;color:#fff;font-family:'Roboto',sans-serif;overflow:hidden;height:100vh;width:100vw}
+    body{background:#000;color:#fff;font-family:'Roboto',sans-serif;overflow-x:hidden;width:100vw}
     .hero{position:relative;width:100%;height:33vh;overflow:hidden}
 
     /* Layer 1 – red radial background */
@@ -34,6 +34,922 @@
       position:absolute;bottom: 3%;left:0;width:100%;z-index:3;pointer-events:none;
     animation-name: slidleft;
       animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes slidleft {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+    /* Layer 4 – person cutout */
+    .layer-person{
+      position:absolute;
+      bottom:0;
+      left:40%;
+      transform:translateX(-42%);
+      height:88%;z-index:4;
+      pointer-events:none;
+      animation-name: pullup;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes pullup {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+    /* Layer 5 – outline text (over person) */
+    .layer-outline-text{
+      position:absolute;bottom: 3%;left:0;width:100%;z-index:5;pointer-events:none;
+    animation-name: slidleft1;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+}
+
+@keyframes slidleft1 {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+    /* Layer 6 – social icons */
+    .layer-socials{
+      position:absolute;bottom:0;left:0;width:100%;z-index:7;pointer-events:none;
+    }
+
+    /* NAV */
+    nav{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      z-index:10;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:28px 52px 0
+    }
+    .logo{
+      font-family:'Science Gothic',sans-serif;
+      font-size:1.8rem;
+      font-weight:700;
+      color:#e00;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .nav-links{display:flex;gap:42px;list-style:none}
+    .nav-links a{
+      font-family:'Science Gothic',sans-serif;
+      color:#fff;text-decoration:none;font-size:1.8rem;
+      font-weight:400;letter-spacing:.5px;transition:color .5s
+    }
+    .nav-links a:hover{color:#e00; text-decoration: underline;}
+  
+     /* Layer 2 – bottom black fade overlay */
+    .layer-bottom-fade{
+mix-blend-mode: multiply;
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:40%;
+object-fit:cover;
+object-position:bottom;
+z-index:6;
+pointer-events:none;
+    }
+
+    /* ===== PORTFOLIO SECTIONS ===== */
+
+    /* --- Glitch Divider --- */
+    .glitch-divider {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .glitch-divider::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #e00, transparent);
+      animation: scanline 3s linear infinite;
+    }
+    @keyframes scanline {
+      0% { background-position: -100% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* --- Section Common --- */
+    .section {
+      width: 100%;
+      padding: 70px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-label {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 6px;
+      color: #e00;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+    .section-title span {
+      color: #e00;
+    }
+
+    /* --- About / Stats Strip --- */
+    #about {
+      background: #0a0a0a;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-bio {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #bbb;
+    }
+    .about-bio strong {
+      color: #e00;
+    }
+    .stats-row {
+      display: flex;
+      gap: 36px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .stat-box {
+      border: 1px solid #2a0000;
+      padding: 18px 28px;
+      text-align: center;
+      flex: 1;
+      min-width: 110px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+    .stat-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 2px;
+      background: #e00;
+      transition: left .4s;
+    }
+    .stat-box:hover::before { left: 0; }
+    .stat-box:hover { border-color: #e00; }
+    .stat-num {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 2.4rem;
+      color: #e00;
+      font-weight: 900;
+    }
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: #888;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Terminal card on right */
+    .terminal-card {
+      background: #0f0f0f;
+      border: 1px solid #1a1a1a;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .terminal-bar {
+      background: #1a1a1a;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .t-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .t-dot.r { background: #e00; }
+    .t-dot.y { background: #f90; }
+    .t-dot.g { background: #0c0; }
+    .terminal-body {
+      padding: 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      color: #0f0;
+      line-height: 2;
+    }
+    .terminal-body .prompt { color: #e00; }
+    .terminal-body .cmd { color: #fff; }
+    .terminal-body .out { color: #888; }
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 1.1em;
+      background: #0f0;
+      vertical-align: middle;
+      animation: blink .7s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* --- Skills Section --- */
+    #skills {
+      background: #050505;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .skill-card {
+      border: 1px solid #1a1a1a;
+      padding: 28px 24px;
+      position: relative;
+      transition: border-color .3s, transform .3s;
+      cursor: default;
+      overflow: hidden;
+    }
+    .skill-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 60% 40%, rgba(220,0,0,.07), transparent 70%);
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    .skill-card:hover { border-color: #e00; transform: translateY(-4px); }
+    .skill-card:hover::after { opacity: 1; }
+    .skill-icon {
+      font-size: 2.2rem;
+      color: #e00;
+      margin-bottom: 14px;
+    }
+    .skill-name {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .skill-bar-track {
+      width: 100%;
+      height: 3px;
+      background: #1a1a1a;
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #900, #e00);
+      width: 0;
+      transition: width 1.4s cubic-bezier(.25,.8,.25,1);
+    }
+    .skill-desc {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* --- Projects / Work --- */
+    #projects {
+      background: #0a0a0a;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .project-card {
+      border: 1px solid #1a1a1a;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+    .project-card:hover { border-color: #e00; }
+    .project-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-thumb-icon {
+      font-size: 3.5rem;
+      color: #1f0000;
+      transition: color .3s, transform .3s;
+    }
+    .project-card:hover .project-thumb-icon { color: #e00; transform: scale(1.15); }
+    .project-thumb-scan {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(220,0,0,.6);
+      animation: scan-down 3s linear infinite;
+    }
+    @keyframes scan-down {
+      0% { top: -2%; }
+      100% { top: 102%; }
+    }
+    .project-info {
+      padding: 18px 20px;
+    }
+    .project-tag {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #e00;
+      margin-bottom: 8px;
+    }
+    .project-title {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .project-desc {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.6;
+    }
+    .project-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .project-links a {
+      font-size: 0.78rem;
+      color: #888;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color .3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .project-links a:hover { color: #e00; }
+
+    /* --- Services Section --- */
+    #services {
+      background: #050505;
+    }
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .service-row {
+      display: flex;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid #111;
+      gap: 32px;
+      transition: padding-left .3s;
+      cursor: default;
+    }
+    .service-row:first-child { border-top: 1px solid #111; }
+    .service-row:hover { padding-left: 16px; }
+    .service-num {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 0.75rem;
+      color: #e00;
+      letter-spacing: 3px;
+      min-width: 36px;
+    }
+    .service-name {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      flex: 1;
+      transition: color .3s;
+    }
+    .service-row:hover .service-name { color: #e00; }
+    .service-desc {
+      font-size: 0.85rem;
+      color: #555;
+      max-width: 320px;
+      line-height: 1.7;
+      text-align: right;
+    }
+    .service-arrow {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      transition: color .3s, transform .3s;
+    }
+    .service-row:hover .service-arrow { color: #e00; transform: translateX(6px); }
+
+    /* --- Contact Section --- */
+    #contact {
+      background: #0a0a0a;
+    }
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .contact-left .big-cta {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 3rem;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+    .contact-left .big-cta span { color: #e00; }
+    .contact-left p {
+      color: #666;
+      line-height: 1.8;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .contact-socials {
+      display: flex;
+      gap: 20px;
+    }
+    .contact-socials a {
+      width: 48px; height: 48px;
+      border: 1px solid #222;
+      display: flex; align-items: center; justify-content: center;
+      color: #888;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: border-color .3s, color .3s, background .3s;
+    }
+    .contact-socials a:hover {
+      border-color: #e00;
+      color: #e00;
+      background: rgba(220,0,0,.08);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cf-input {
+      background: #0f0f0f;
+      border: 1px solid #1a1a1a;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color .3s;
+      width: 100%;
+    }
+    .cf-input:focus { border-color: #e00; }
+    .cf-input::placeholder { color: #444; }
+    textarea.cf-input { resize: vertical; min-height: 130px; }
+    .cf-btn {
+      background: #e00;
+      color: #fff;
+      border: none;
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      cursor: pointer;
+      transition: background .3s, transform .2s;
+      align-self: flex-start;
+    }
+    .cf-btn:hover { background: #b00; transform: translateY(-2px); }
+    .cf-btn:active { transform: translateY(0); }
+
+    /* --- Footer Strip --- */
+    footer {
+      background: #000;
+      border-top: 1px solid #111;
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo {
+      font-family: 'Science Gothic', sans-serif;
+      font-size: 1.1rem;
+      color: #e00;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: #444;
+      letter-spacing: 1px;
+    }
+    .footer-back-top {
+      font-size: 0.78rem;
+      color: #888;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color .3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-back-top:hover { color: #e00; }
+
+    /* --- Floating red noise particles --- */
+    #particles-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .25;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav>
+    <div class="logo">RITIK CYBERX</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ===== ORIGINAL HERO ===== -->
+  <section class="hero" id="hero">
+    <img class="layer-bg"          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh76dTofZPLg3M-Dr60lSPnfHINBwE7nzhGH5T4zP-h0oO6N9o7ut8PeYsURAGwWcM4Of-d0y0Jlg0tJ693yjqGdYhejXewP6BxHMAy9i1QyVBthbSLSoJUREA3C2MJ4zYBhDpVJwoC7_6UUxqMxYAV6KbZV1Zo3rIiJnXV7iFSvQ4HzTU-1HR_veiG3ic/s1920/hero.png"           alt=""/>
+    <img class="layer-solid-text"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-ZURkz6NDQHz07xD6Ps2Ba6ytW_lTh9TED_0lnDoXjgTCVjT7dRH2bpNMGxU5ELNkgnLYVeIQvU0H87haddZ-8iS_yLzmkGSK0n_9DOAyOVXEzd8mSHBDs4rxmIRxe0CukFNZBzqxBd6jU9JpGktZnQJkOU3uwloJlWqlWfo9p6JcOhPw2b2gcrC3HNg/s320/k_text.png"   alt=""/>
+    <img class="layer-person"      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_KKmUnIXN7z89gtRbvTfR1hSyILlTUMActv9lKPwwOXe2goxVS7cHYPZ1gPuYFPW7JJDXBczFfiMwyr-fBqS_bCBWpp_RKr48nd0UCAagFYhhsjzDn_60wgCWjZMfUhqFSSBkEj_q7RrKM495kJCXL7EzScWSLIwQEkvkuqP1M6Tg3fiGRz9Jm-fUG_Q/s1000/f2b9625033ea47feb867aea655646882.png"       alt="Ritik Cyberx"/>
+    <img class="layer-outline-text" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDGm_esdbQJ07OtmV-_lYRbF9sDBaPApzl0RYglOkC5PDklimO8qhcg3DGAZqcgbEwZFZNaXvUP1OpVVzSP8l61Oa5xAexuvG1N8leGY0M378MJm5yuoaHhyvrKuXo7mwaJLDDbvxd46Wcg6EK3FQ3mixsqjZNTHJXqjvePjnCEdiIij7yMgg_qoG6K3c/s1920/stroke.png" alt=""/>
+    <img class="layer-bottom-fade" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVIzvnhxTdZmRq_Utm07U_E8ncbJyOVhTmHlHGpqoHWX1RYgcVIeaVnbhZCs7ApXmGdG1NUXrWX_ECzLStvQA2vQ6Q7Ijziyz4AfCuV80iwsg_cEgpBGxL5-WLbeO-jk5AEkJ8cKcTGbfnJMFA0w8o8B14oBFXQeLDqydmosQO1kEzt9jm7XNMewZAvis/s320/bottomfade.png"  alt=""/>
+    <div class="layer-socials">
+      <i class="fa fa-instagram" style="font-size:50px;color:red;position:absolute;left:20px;bottom:7px;">
+        <span style="font-size:30px;position:absolute;left:50px;bottom:10px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
+      </i>
+      <i class="fa fa-youtube-play" style="font-size:50px;color:red;position:absolute;right:250px;bottom:8px;">
+        <span style="font-size:30px;position:absolute;right:-235px;bottom:9px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
+      </i>
+    </div>
+  </section>
+
+  <!-- ===== GLITCH DIVIDER ===== -->
+  <div class="glitch-divider"></div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="section-label">// Who I Am</p>
+        <h2 class="section-title">Ethical<br><span>Hacker</span></h2>
+        <p class="about-bio">
+          Main <strong>Ritik</strong> hoon — ek passionate <strong>Ethical Hacker</strong> aur Cybersecurity Researcher. 
+          Mera kaam hai digital systems ko safe banana, vulnerabilities dhundhna, aur logon ko 
+          cyber threats se protect karna. Penetration testing se lekar bug bounty tak, main 
+          har challenge ko seriously leta hoon.
+        </p>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num">50+</div>
+            <div class="stat-lbl">Bugs Found</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-lbl">Yrs Exp</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">20+</div>
+            <div class="stat-lbl">Tutorials</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">∞</div>
+            <div class="stat-lbl">Learning</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <div class="t-dot r"></div>
+            <div class="t-dot y"></div>
+            <div class="t-dot g"></div>
+            <span style="font-size:.75rem;color:#444;margin-left:8px;">ritik@cyberx ~ terminal</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="prompt">root@cyberx:~# </span><span class="cmd">whoami</span></div>
+            <div class="out">Ritik Cyberx — Ethical Hacker</div>
+            <div><span class="prompt">root@cyberx:~# </span><span class="cmd">cat skills.txt</span></div>
+            <div class="out">Penetration Testing, OSINT</div>
+            <div class="out">Web Hacking, Network Security</div>
+            <div class="out">CTF Challenges, Bug Bounty</div>
+            <div><span class="prompt">root@cyberx:~# </span><span class="cmd">cat mission.txt</span></div>
+            <div class="out">Secure the web. Educate all.</div>
+            <div><span class="prompt">root@cyberx:~# </span><span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glitch-divider"></div>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <p class="section-label reveal">// What I Know</p>
+    <h2 class="section-title reveal">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-bug"></i></div>
+        <div class="skill-name">Penetration Testing</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+        <div class="skill-desc">Web, Network aur Mobile app ka full pentest. Vulnerabilities identify karna aur exploit karna ethically.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-globe"></i></div>
+        <div class="skill-name">Web Hacking</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        <div class="skill-desc">XSS, SQLi, CSRF, SSRF, IDOR aur OWASP Top 10 vulnerabilities ka deep knowledge.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-search"></i></div>
+        <div class="skill-name">OSINT</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        <div class="skill-desc">Open Source Intelligence gathering using Maltego, Recon-ng, Shodan aur custom scripts.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-wifi"></i></div>
+        <div class="skill-name">Network Security</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        <div class="skill-desc">Wireshark, Nmap, Metasploit — network ko scan karna, analyze karna aur secure karna.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-trophy"></i></div>
+        <div class="skill-name">CTF / Bug Bounty</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+        <div class="skill-desc">HackTheBox, TryHackMe aur HackerOne platforms par active. Multiple CVEs aur hall of fames.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa fa-code"></i></div>
+        <div class="skill-name">Scripting / Coding</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+        <div class="skill-desc">Python, Bash scripting for automation. Custom tools banata hoon pentesting ke liye.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glitch-divider"></div>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <p class="section-label reveal">// What I've Built</p>
+    <h2 class="section-title reveal">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <i class="fa fa-shield project-thumb-icon"></i>
+          <div class="project-thumb-scan"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Web Security</div>
+          <div class="project-title">XSS Scanner Tool</div>
+          <div class="project-desc">Ek Python-based automated tool jo websites mein XSS vulnerabilities dhundta hai. 500+ sites pe successfully tested.</div>
+          <div class="project-links">
+            <a href="#"><i class="fa fa-github"></i> GitHub</a>
+            <a href="#"><i class="fa fa-external-link"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <i class="fa fa-lock project-thumb-icon"></i>
+          <div class="project-thumb-scan"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">OSINT Tool</div>
+          <div class="project-title">SubDomain Recon</div>
+          <div class="project-desc">Fast subdomain enumeration tool with passive + active reconnaissance. Bug bounty hunters ke liye perfect.</div>
+          <div class="project-links">
+            <a href="#"><i class="fa fa-github"></i> GitHub</a>
+            <a href="#"><i class="fa fa-external-link"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <i class="fa fa-graduation-cap project-thumb-icon"></i>
+          <div class="project-thumb-scan"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Education</div>
+          <div class="project-title">CyberX Tutorials</div>
+          <div class="project-desc">Step-by-step ethical hacking tutorials Hindi mein. Beginners se advanced tak — free for all.</div>
+          <div class="project-links">
+            <a href="#"><i class="fa fa-youtube-play"></i> YouTube</a>
+            <a href="#"><i class="fa fa-external-link"></i> Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glitch-divider"></div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <p class="section-label reveal">// What I Offer</p>
+    <h2 class="section-title reveal">My <span>Services</span></h2>
+    <div class="services-list">
+      <div class="service-row reveal">
+        <span class="service-num">01</span>
+        <span class="service-name">Penetration Testing</span>
+        <span class="service-desc">Web, API ya mobile app ka full security audit. Detailed report ke saath.</span>
+        <i class="fa fa-arrow-right service-arrow"></i>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">02</span>
+        <span class="service-name">Bug Bounty Hunting</span>
+        <span class="service-desc">Aapki site ke vulnerabilities dhundna responsible disclosure ke saath.</span>
+        <i class="fa fa-arrow-right service-arrow"></i>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">03</span>
+        <span class="service-name">Security Consultation</span>
+        <span class="service-desc">Startup ya business ke liye cyber security roadmap aur best practices.</span>
+        <i class="fa fa-arrow-right service-arrow"></i>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">04</span>
+        <span class="service-name">Hacking Tutorials</span>
+        <span class="service-desc">1-on-1 training ya group workshops — ethical hacking sikhao, practically.</span>
+        <i class="fa fa-arrow-right service-arrow"></i>
+      </div>
+      <div class="service-row reveal">
+        <span class="service-num">05</span>
+        <span class="service-name">OSINT Investigation</span>
+        <span class="service-desc">Digital footprint analysis, threat intel aur reconnaissance services.</span>
+        <i class="fa fa-arrow-right service-arrow"></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="glitch-divider"></div>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="contact-wrap">
+      <div class="reveal">
+        <p class="section-label">// Get In Touch</p>
+        <div class="big-cta">Let's Work<br><span>Together</span></div>
+        <p>Project hai? Question hai? Sikhna chahte ho? Kisi bhi kaam ke liye reach out karo — main serious requests ka reply zaroor karta hoon.</p>
+        <div class="contact-socials">
+          <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+          <a href="#" title="GitHub"><i class="fa fa-github"></i></a>
+          <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" title="Telegram"><i class="fa fa-telegram"></i></a>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="cf-row">
+          <input class="cf-input" type="text" placeholder="Your Name" />
+          <input class="cf-input" type="email" placeholder="Your Email" />
+        </div>
+        <input class="cf-input" type="text" placeholder="Subject" />
+        <textarea class="cf-input" placeholder="Your Message..."></textarea>
+        <button class="cf-btn">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Ritik Cyberx</div>
+    <div class="footer-copy">© 2025 Ritik Cyberx. All rights reserved.</div>
+    <a class="footer-back-top" href="#hero"><i class="fa fa-arrow-up"></i> Back to top</a>
+  </footer>
+
+  <script>
+    // ---- Particle Canvas ----
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = document.body.scrollHeight;
+    }
+    resize();
+    window.addEventListener('resize', () => { resize(); });
+
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight * 4,
+        r: Math.random() * 1.5 + 0.3,
+        dx: (Math.random() - 0.5) * 0.4,
+        dy: (Math.random() - 0.5) * 0.3,
+        a: Math.random()
+      });
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(220,0,0,${p.a * 0.7})`;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > W) p.dx *= -1;
+        if (p.y < 0 || p.y > H) p.dy *= -1;
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // ---- Scroll Reveal ----
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+
+    // ---- Skill Bar Animation ----
+    const barObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const fill = e.target.querySelector('.skill-bar-fill');
+          if (fill) fill.style.width = fill.dataset.width + '%';
+          barObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-card').forEach(c => barObs.observe(c));
+
+    // ---- Smooth Scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
       animation-timing-function: ease-in;
       animation-delay: 0s;
       animation-fill-mode: forwards;
