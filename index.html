@@ -20,6 +20,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+<meta property="og:site_name" content="Ritik Cyberx">
+
+<meta property="og:title" content="Ritik Cyberx">
+
+<meta name="twitter:title" content="Ritik Cyberx">
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap');
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -948,162 +955,5 @@ pointer-events:none;
       });
     });
   </script>
-</body>
-</html>
-      animation-timing-function: ease-in;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
-}
-
-@keyframes slidleft {
-  0% {
-    left: -500px; /* Unit 'px' add kiya gaya hai */
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-    /* Layer 4 – person cutout */
-    .layer-person{
-      position:absolute;
-      bottom:0;
-      left:40%;
-      transform:translateX(-42%);
-      height:88%;z-index:4;
-      pointer-events:none;
-      animation-name: pullup;
-      animation-duration: 1s;
-      animation-timing-function: ease-in;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
-}
-
-@keyframes pullup {
-  0% {
-    bottom: -500px; /* Unit 'px' add kiya gaya hai */
-  }
-  100% {
-    bottom: 0px;
-  }
-}
-
-    /* Layer 5 – outline text (over person) */
-    .layer-outline-text{
-      position:absolute;bottom: 3%;left:0;width:100%;z-index:5;pointer-events:none;
-    animation-name: slidleft1;
-      animation-duration: 1s;
-      animation-timing-function: ease-in;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
-}
-
-@keyframes slidleft1 {
-  0% {
-    left: 500px; /* Unit 'px' add kiya gaya hai */
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-    /* Layer 6 – social icons */
-    .layer-socials{
-      position:absolute;bottom:0;left:0;width:100%;z-index:7;pointer-events:none;
-    }
-
-    /* NAV */
-    nav{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index:10;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:28px 52px 0
-    }
-    .logo{
-      font-family:'Science Gothic',sans-serif;
-      font-size:1.8rem;
-      font-weight:700;
-      color:#e00;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
-    .nav-links{display:flex;gap:42px;list-style:none}
-    .nav-links a{
-      font-family:'Science Gothic',sans-serif;
-      color:#fff;text-decoration:none;font-size:1.8rem;
-      font-weight:400;letter-spacing:.5px;transition:color .5s
-    }
-    .nav-links a:hover{color:#e00; text-decoration: underline;}
-  
-     /* Layer 2 – bottom black fade overlay */
-    .layer-bottom-fade{
-mix-blend-mode: multiply;
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:40%;
-object-fit:cover;
-object-position:bottom;
-z-index:6;
-pointer-events:none;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="logo">RITIK CYBERX</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#">Service</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
-  
-<section class="hero" id="#hero">
-
-  <img class="layer-bg"          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh76dTofZPLg3M-Dr60lSPnfHINBwE7nzhGH5T4zP-h0oO6N9o7ut8PeYsURAGwWcM4Of-d0y0Jlg0tJ693yjqGdYhejXewP6BxHMAy9i1QyVBthbSLSoJUREA3C2MJ4zYBhDpVJwoC7_6UUxqMxYAV6KbZV1Zo3rIiJnXV7iFSvQ4HzTU-1HR_veiG3ic/s1920/hero.png"           alt=""/>
-    
-  <img class="layer-solid-text"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-ZURkz6NDQHz07xD6Ps2Ba6ytW_lTh9TED_0lnDoXjgTCVjT7dRH2bpNMGxU5ELNkgnLYVeIQvU0H87haddZ-8iS_yLzmkGSK0n_9DOAyOVXEzd8mSHBDs4rxmIRxe0CukFNZBzqxBd6jU9JpGktZnQJkOU3uwloJlWqlWfo9p6JcOhPw2b2gcrC3HNg/s320/k_text.png"   alt=""/>
-  
-  <img class="layer-person"      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_KKmUnIXN7z89gtRbvTfR1hSyILlTUMActv9lKPwwOXe2goxVS7cHYPZ1gPuYFPW7JJDXBczFfiMwyr-fBqS_bCBWpp_RKr48nd0UCAagFYhhsjzDn_60wgCWjZMfUhqFSSBkEj_q7RrKM495kJCXL7EzScWSLIwQEkvkuqP1M6Tg3fiGRz9Jm-fUG_Q/s1000/f2b9625033ea47feb867aea655646882.png"       alt="Ritik Cyberx"/>
-  
-  <img class="layer-outline-text" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDGm_esdbQJ07OtmV-_lYRbF9sDBaPApzl0RYglOkC5PDklimO8qhcg3DGAZqcgbEwZFZNaXvUP1OpVVzSP8l61Oa5xAexuvG1N8leGY0M378MJm5yuoaHhyvrKuXo7mwaJLDDbvxd46Wcg6EK3FQ3mixsqjZNTHJXqjvePjnCEdiIij7yMgg_qoG6K3c/s1920/stroke.png" alt=""/>
-  
-  <img class="layer-bottom-fade" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVIzvnhxTdZmRq_Utm07U_E8ncbJyOVhTmHlHGpqoHWX1RYgcVIeaVnbhZCs7ApXmGdG1NUXrWX_ECzLStvQA2vQ6Q7Ijziyz4AfCuV80iwsg_cEgpBGxL5-WLbeO-jk5AEkJ8cKcTGbfnJMFA0w8o8B14oBFXQeLDqydmosQO1kEzt9jm7XNMewZAvis/s320/bottomfade.png"  alt=""/>
-   
-  <div class="layer-socials">
-  
-  <i class="fa fa-instagram" style="
-    font-size:50px;
-    color:red;
-    position:absolute;
-    left: 20px;
-    bottom: 7px;
-    ">
-  <span style="font-size:30px; position:absolute; left: 50px; bottom: 10px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
-  
-  </i>
-  
- <i class="fa fa-youtube-play" style="
-font-size:50px;
-color:red;
-position:absolute;
-right: 250px; bottom: 8px;"> 
-   
-<span style="font-size:30px; position:absolute; right: -235px; bottom: 9px;font-family:'Science Gothic',sans-serif;"> @Ritik_cyberx</span>
-   
- </i>
-    
-    
-  </div>
-  </div>
-</section>
 </body>
 </html>
